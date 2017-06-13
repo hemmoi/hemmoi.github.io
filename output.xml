@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170401 22:29:01.098" generator="Robot 3.0.1 (Python 2.7.13 on win32)">
+<suite source="C:\Users\hemmoi\react\Demopage2\robot\Tests\Demo.robot" id="s1" name="Demo">
+<kw type="setup" name="Begin test suite" library="Common">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Setting up test suite...</arg>
+</arguments>
+<msg timestamp="20170401 22:29:01.267" level="INFO">Setting up test suite...</msg>
+<status status="PASS" endtime="20170401 22:29:01.267" starttime="20170401 22:29:01.267"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:01.267" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170401 22:29:05.056" starttime="20170401 22:29:01.267"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170401 22:29:06.267" starttime="20170401 22:29:05.057"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:06.268" starttime="20170401 22:29:01.267"></status>
+</kw>
+<test id="s1-t1" name="User can browse all top navigation tabs">
+<kw name="Browse all top navigation tabs" library="DemopageApp">
+<kw name="Load Landing Page" library="Info">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:06.270" level="INFO">Opening url 'localhost:3000'</msg>
+<status status="PASS" endtime="20170401 22:29:07.382" starttime="20170401 22:29:06.270"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:07.382" starttime="20170401 22:29:06.270"></status>
+</kw>
+<kw name="Click &quot;Todo App&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TODO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:07.383" level="INFO">Clicking element 'xpath=//*[@id="todo-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:07.534" starttime="20170401 22:29:07.383"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:07.534" starttime="20170401 22:29:07.382"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Demo">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Todo</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:07.571" starttime="20170401 22:29:07.535"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:07.571" starttime="20170401 22:29:07.534"></status>
+</kw>
+<kw name="Click &quot;Unit Tests&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${UNIT_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:07.573" level="INFO">Clicking element 'xpath=//*[@id="unit-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:08.075" starttime="20170401 22:29:07.572"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:08.075" starttime="20170401 22:29:07.572"></status>
+</kw>
+<kw name="Verify Page Loaded" library="UnitTests">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Unit Tests</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:08.122" starttime="20170401 22:29:08.076"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:08.122" starttime="20170401 22:29:08.075"></status>
+</kw>
+<kw name="Click &quot;Robot Framework&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ROBOT_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:08.123" level="INFO">Clicking element 'xpath=//*[@id="robot-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:08.699" starttime="20170401 22:29:08.123"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:08.699" starttime="20170401 22:29:08.122"></status>
+</kw>
+<kw name="Verify Page Loaded" library="RobotTests">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Robot Framework Tests</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:08.740" starttime="20170401 22:29:08.700"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:08.741" starttime="20170401 22:29:08.700"></status>
+</kw>
+<kw name="Click &quot;Information&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${INFO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:08.742" level="INFO">Clicking element 'xpath=//*[@id="info-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:08.873" starttime="20170401 22:29:08.741"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:08.874" starttime="20170401 22:29:08.741"></status>
+</kw>
+<kw name="Verify &quot;About these pages&quot; Page Loaded" library="Info">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Welcome</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:08.905" starttime="20170401 22:29:08.874"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:08.905" starttime="20170401 22:29:08.874"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:08.905" starttime="20170401 22:29:06.270"></status>
+</kw>
+<doc>All top navigation tabs work and open the right page</doc>
+<tags>
+<tag>Navigation</tag>
+</tags>
+<status status="PASS" endtime="20170401 22:29:08.906" critical="yes" starttime="20170401 22:29:06.269"></status>
+</test>
+<test id="s1-t2" name="User can browse all tabs on the &quot;Information&quot; page">
+<kw name="Browse all tabs on the &quot;Information&quot; page" library="DemopageApp">
+<kw name="Load Landing Page" library="Info">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:08.909" level="INFO">Opening url 'localhost:3000'</msg>
+<status status="PASS" endtime="20170401 22:29:09.444" starttime="20170401 22:29:08.909"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:09.444" starttime="20170401 22:29:08.909"></status>
+</kw>
+<kw name="Click &quot;Demo info&quot; Tab" library="InfoPageNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DEMO_INFO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:09.445" level="INFO">Clicking element 'css=#react-tabs-2'.</msg>
+<status status="PASS" endtime="20170401 22:29:09.571" starttime="20170401 22:29:09.445"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:09.571" starttime="20170401 22:29:09.444"></status>
+</kw>
+<kw name="Verify &quot;Demo info&quot; Page Loaded" library="Info">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Used technologies</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:09.599" starttime="20170401 22:29:09.572"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:09.599" starttime="20170401 22:29:09.571"></status>
+</kw>
+<kw name="Click &quot;About Me&quot; Tab" library="InfoPageNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ABOUT_ME_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:09.601" level="INFO">Clicking element 'css=#react-tabs-4'.</msg>
+<status status="PASS" endtime="20170401 22:29:10.541" starttime="20170401 22:29:09.600"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.541" starttime="20170401 22:29:09.599"></status>
+</kw>
+<kw name="Verify &quot;About Me&quot; Page Loaded" library="Info">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Who am I</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:10.569" starttime="20170401 22:29:10.541"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.570" starttime="20170401 22:29:10.541"></status>
+</kw>
+<kw name="Click &quot;Contact info&quot; Tab" library="InfoPageNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CONTACT_INFO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:10.571" level="INFO">Clicking element 'css=#react-tabs-6'.</msg>
+<status status="PASS" endtime="20170401 22:29:10.684" starttime="20170401 22:29:10.570"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.684" starttime="20170401 22:29:10.570"></status>
+</kw>
+<kw name="Verify &quot;Contact info&quot; Page Loaded" library="Info">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Contact information</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:10.713" starttime="20170401 22:29:10.685"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.713" starttime="20170401 22:29:10.684"></status>
+</kw>
+<kw name="Click &quot;About these pages&quot; Tab" library="InfoPageNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ABOUT_PAGES_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:10.714" level="INFO">Clicking element 'css=#react-tabs-0'.</msg>
+<status status="PASS" endtime="20170401 22:29:10.812" starttime="20170401 22:29:10.714"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.812" starttime="20170401 22:29:10.713"></status>
+</kw>
+<kw name="Verify &quot;About these pages&quot; Page Loaded" library="Info">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Welcome</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:10.825" starttime="20170401 22:29:10.813"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.825" starttime="20170401 22:29:10.812"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.825" starttime="20170401 22:29:08.908"></status>
+</kw>
+<doc>All "Information" page tabs work and open the right page</doc>
+<tags>
+<tag>Navigation</tag>
+</tags>
+<status status="PASS" endtime="20170401 22:29:10.826" critical="yes" starttime="20170401 22:29:08.907"></status>
+</test>
+<test id="s1-t3" name="User can add new ToDo item">
+<kw name="Add new ToDo item" library="DemopageApp">
+<arguments>
+<arg>${ADD TODO TEXT}</arg>
+</arguments>
+<kw name="Click &quot;Todo App&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TODO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:10.830" level="INFO">Clicking element 'xpath=//*[@id="todo-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:10.927" starttime="20170401 22:29:10.830"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.927" starttime="20170401 22:29:10.829"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Demo">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Todo</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:10.940" starttime="20170401 22:29:10.928"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:10.940" starttime="20170401 22:29:10.927"></status>
+</kw>
+<kw name="Add Todo" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input</arg>
+<arg>${todo}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:10.941" level="INFO">Typing text 'Text for add todo test' into text field 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input'</msg>
+<status status="PASS" endtime="20170401 22:29:11.084" starttime="20170401 22:29:10.941"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button</arg>
+</arguments>
+<msg timestamp="20170401 22:29:11.085" level="INFO">Clicking button 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button'.</msg>
+<status status="PASS" endtime="20170401 22:29:11.206" starttime="20170401 22:29:11.084"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.207" starttime="20170401 22:29:10.940"></status>
+</kw>
+<kw name="Verify ToDo Item Can Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:11.446" starttime="20170401 22:29:11.208"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.446" starttime="20170401 22:29:11.207"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.446" starttime="20170401 22:29:10.829"></status>
+</kw>
+<doc>New ToDo item is added and can be found from the ToDos list</doc>
+<tags>
+<tag>ToDo</tag>
+</tags>
+<status status="PASS" endtime="20170401 22:29:11.447" critical="yes" starttime="20170401 22:29:10.828"></status>
+</test>
+<test id="s1-t4" name="User can complete a ToDo item">
+<kw name="Complete ToDo item" library="DemopageApp">
+<arguments>
+<arg>${COMPLETE TODO TEXT}</arg>
+</arguments>
+<kw name="Add new ToDo item" library="DemopageApp">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Click &quot;Todo App&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TODO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:11.452" level="INFO">Clicking element 'xpath=//*[@id="todo-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:11.519" starttime="20170401 22:29:11.452"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.519" starttime="20170401 22:29:11.451"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Demo">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Todo</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:11.532" starttime="20170401 22:29:11.520"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.532" starttime="20170401 22:29:11.520"></status>
+</kw>
+<kw name="Add Todo" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input</arg>
+<arg>${todo}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:11.533" level="INFO">Typing text 'Text for complete todo test' into text field 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input'</msg>
+<status status="PASS" endtime="20170401 22:29:11.603" starttime="20170401 22:29:11.533"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button</arg>
+</arguments>
+<msg timestamp="20170401 22:29:11.603" level="INFO">Clicking button 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button'.</msg>
+<status status="PASS" endtime="20170401 22:29:11.697" starttime="20170401 22:29:11.603"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.697" starttime="20170401 22:29:11.532"></status>
+</kw>
+<kw name="Verify ToDo Item Can Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:11.948" starttime="20170401 22:29:11.698"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.948" starttime="20170401 22:29:11.698"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:11.948" starttime="20170401 22:29:11.451"></status>
+</kw>
+<kw name="Click Existing Todo item" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[contains(text(), '${todo}')]</arg>
+</arguments>
+<msg timestamp="20170401 22:29:11.948" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Text for complete todo test')]'.</msg>
+<status status="PASS" endtime="20170401 22:29:12.136" starttime="20170401 22:29:11.948"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.136" starttime="20170401 22:29:11.948"></status>
+</kw>
+<kw name="Verify ToDo Item Can Not Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
+<doc>Waits until `text` disappears from current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:12.398" starttime="20170401 22:29:12.138"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.399" starttime="20170401 22:29:12.137"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.400" starttime="20170401 22:29:11.450"></status>
+</kw>
+<doc>Item in a ToDo list is marked as completed</doc>
+<tags>
+<tag>ToDo</tag>
+</tags>
+<status status="PASS" endtime="20170401 22:29:12.400" critical="yes" starttime="20170401 22:29:11.449"></status>
+</test>
+<test id="s1-t5" name="User can see completed ToDo item">
+<kw name="Show Completed ToDos" library="DemopageApp">
+<arguments>
+<arg>${COMPLETED TODO TEXT}</arg>
+</arguments>
+<kw name="Complete ToDo item" library="DemopageApp">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Add new ToDo item" library="DemopageApp">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Click &quot;Todo App&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TODO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:12.415" level="INFO">Clicking element 'xpath=//*[@id="todo-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:12.523" starttime="20170401 22:29:12.414"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.524" starttime="20170401 22:29:12.413"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Demo">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Todo</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:12.540" starttime="20170401 22:29:12.525"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.541" starttime="20170401 22:29:12.524"></status>
+</kw>
+<kw name="Add Todo" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input</arg>
+<arg>${todo}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:12.542" level="INFO">Typing text 'Text for show completed items test' into text field 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input'</msg>
+<status status="PASS" endtime="20170401 22:29:12.625" starttime="20170401 22:29:12.541"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button</arg>
+</arguments>
+<msg timestamp="20170401 22:29:12.625" level="INFO">Clicking button 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button'.</msg>
+<status status="PASS" endtime="20170401 22:29:12.707" starttime="20170401 22:29:12.625"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.707" starttime="20170401 22:29:12.541"></status>
+</kw>
+<kw name="Verify ToDo Item Can Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:12.955" starttime="20170401 22:29:12.708"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.956" starttime="20170401 22:29:12.707"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:12.956" starttime="20170401 22:29:12.411"></status>
+</kw>
+<kw name="Click Existing Todo item" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[contains(text(), '${todo}')]</arg>
+</arguments>
+<msg timestamp="20170401 22:29:12.958" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Text for show completed items test')]'.</msg>
+<status status="PASS" endtime="20170401 22:29:13.059" starttime="20170401 22:29:12.957"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.059" starttime="20170401 22:29:12.956"></status>
+</kw>
+<kw name="Verify ToDo Item Can Not Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
+<doc>Waits until `text` disappears from current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:13.299" starttime="20170401 22:29:13.060"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.299" starttime="20170401 22:29:13.059"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.300" starttime="20170401 22:29:12.409"></status>
+</kw>
+<kw name="Select &quot;Show completed todos&quot; check box" library="Demo">
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input</arg>
+</arguments>
+<msg timestamp="20170401 22:29:13.303" level="INFO">Selecting checkbox 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input'.</msg>
+<status status="PASS" endtime="20170401 22:29:13.438" starttime="20170401 22:29:13.302"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.439" starttime="20170401 22:29:13.301"></status>
+</kw>
+<kw name="Verify ToDo Item Can Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:13.451" starttime="20170401 22:29:13.440"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.451" starttime="20170401 22:29:13.439"></status>
+</kw>
+<kw name="Unselect &quot;Show completed todos&quot; check box" library="Demo">
+<kw name="Unselect Checkbox" library="Selenium2Library">
+<doc>Removes selection of checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input</arg>
+</arguments>
+<msg timestamp="20170401 22:29:13.452" level="INFO">Unselecting checkbox 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input'.</msg>
+<status status="PASS" endtime="20170401 22:29:13.497" starttime="20170401 22:29:13.452"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.497" starttime="20170401 22:29:13.452"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.497" starttime="20170401 22:29:12.408"></status>
+</kw>
+<doc>Completed item in a ToDo list can be seen if "Show completed todos" box is checked.</doc>
+<tags>
+<tag>ToDo</tag>
+</tags>
+<status status="PASS" endtime="20170401 22:29:13.498" critical="yes" starttime="20170401 22:29:12.404"></status>
+</test>
+<test id="s1-t6" name="User can re-activate completed ToDo item">
+<kw name="Re-activate Completed ToDo" library="DemopageApp">
+<arguments>
+<arg>${RE-ACTIVATE TODO TEXT}</arg>
+</arguments>
+<kw name="Complete ToDo item" library="DemopageApp">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Add new ToDo item" library="DemopageApp">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Click &quot;Todo App&quot; Tab" library="TopNav">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TODO_TAB}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:13.503" level="INFO">Clicking element 'xpath=//*[@id="todo-tab"]'.</msg>
+<status status="PASS" endtime="20170401 22:29:13.547" starttime="20170401 22:29:13.503"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.547" starttime="20170401 22:29:13.502"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Demo">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Todo</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:13.560" starttime="20170401 22:29:13.548"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.560" starttime="20170401 22:29:13.547"></status>
+</kw>
+<kw name="Add Todo" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input</arg>
+<arg>${todo}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:13.561" level="INFO">Typing text 'Text for re-activating completed item test' into text field 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input'</msg>
+<status status="PASS" endtime="20170401 22:29:13.640" starttime="20170401 22:29:13.561"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button</arg>
+</arguments>
+<msg timestamp="20170401 22:29:13.640" level="INFO">Clicking button 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button'.</msg>
+<status status="PASS" endtime="20170401 22:29:13.711" starttime="20170401 22:29:13.640"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.712" starttime="20170401 22:29:13.560"></status>
+</kw>
+<kw name="Verify ToDo Item Can Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:13.971" starttime="20170401 22:29:13.712"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.972" starttime="20170401 22:29:13.712"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:13.972" starttime="20170401 22:29:13.502"></status>
+</kw>
+<kw name="Click Existing Todo item" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[contains(text(), '${todo}')]</arg>
+</arguments>
+<msg timestamp="20170401 22:29:13.975" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Text for re-activating completed item test')]'.</msg>
+<status status="PASS" endtime="20170401 22:29:14.099" starttime="20170401 22:29:13.974"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.099" starttime="20170401 22:29:13.973"></status>
+</kw>
+<kw name="Verify ToDo Item Can Not Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
+<doc>Waits until `text` disappears from current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:14.339" starttime="20170401 22:29:14.100"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.339" starttime="20170401 22:29:14.099"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.340" starttime="20170401 22:29:13.501"></status>
+</kw>
+<kw name="Select &quot;Show completed todos&quot; check box" library="Demo">
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.343" level="INFO">Selecting checkbox 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input'.</msg>
+<status status="PASS" endtime="20170401 22:29:14.491" starttime="20170401 22:29:14.342"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.491" starttime="20170401 22:29:14.341"></status>
+</kw>
+<kw name="Click Existing Todo item" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[contains(text(), '${todo}')]</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.493" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Text for re-activating completed item test')]'.</msg>
+<status status="PASS" endtime="20170401 22:29:14.583" starttime="20170401 22:29:14.492"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.583" starttime="20170401 22:29:14.491"></status>
+</kw>
+<kw name="Verify ToDo Item Can Be Seen" library="Demo">
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:14.594" starttime="20170401 22:29:14.584"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.595" starttime="20170401 22:29:14.583"></status>
+</kw>
+<kw name="Unselect &quot;Show completed todos&quot; check box" library="Demo">
+<kw name="Unselect Checkbox" library="Selenium2Library">
+<doc>Removes selection of checkbox identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.596" level="INFO">Unselecting checkbox 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[2]/label/input'.</msg>
+<status status="PASS" endtime="20170401 22:29:14.644" starttime="20170401 22:29:14.595"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.644" starttime="20170401 22:29:14.595"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.645" starttime="20170401 22:29:13.501"></status>
+</kw>
+<doc>Completed item in the todo list can be re-activated.</doc>
+<tags>
+<tag>ToDo</tag>
+</tags>
+<status status="PASS" endtime="20170401 22:29:14.645" critical="yes" starttime="20170401 22:29:13.500"></status>
+</test>
+<test id="s1-t7" name="User can search Todo items">
+<kw name="Search ToDos" library="DemopageApp">
+<arguments>
+<arg>${SEARCH TODO TEXT1}</arg>
+<arg>${SEARCH TODO TEXT2}</arg>
+</arguments>
+<kw name="Add Todo" library="Demo">
+<arguments>
+<arg>${todo1}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input</arg>
+<arg>${todo}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.649" level="INFO">Typing text '1qaz2wsx' into text field 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input'</msg>
+<status status="PASS" endtime="20170401 22:29:14.703" starttime="20170401 22:29:14.649"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.704" level="INFO">Clicking button 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button'.</msg>
+<status status="PASS" endtime="20170401 22:29:14.777" starttime="20170401 22:29:14.703"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.777" starttime="20170401 22:29:14.648"></status>
+</kw>
+<kw name="Add Todo" library="Demo">
+<arguments>
+<arg>${todo2}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input</arg>
+<arg>${todo}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.778" level="INFO">Typing text '3edc4rfv' into text field 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/input'</msg>
+<status status="PASS" endtime="20170401 22:29:14.827" starttime="20170401 22:29:14.778"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.828" level="INFO">Clicking button 'xpath=//*[@id="app"]/div/div[2]/div/div/div/div/div[3]/form/button'.</msg>
+<status status="PASS" endtime="20170401 22:29:14.889" starttime="20170401 22:29:14.828"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:14.890" starttime="20170401 22:29:14.777"></status>
+</kw>
+<kw name="Add Text to &quot;Search todos&quot; field" library="Demo">
+<arguments>
+<arg>${todo1}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[1]/input</arg>
+<arg>${todo}</arg>
+</arguments>
+<msg timestamp="20170401 22:29:14.891" level="INFO">Typing text '1qaz2wsx' into text field '//*[@id="app"]/div/div[2]/div/div/div/div/div[1]/div[1]/input'</msg>
+<status status="PASS" endtime="20170401 22:29:15.021" starttime="20170401 22:29:14.890"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:15.021" starttime="20170401 22:29:14.890"></status>
+</kw>
+<kw name="Verify ToDo Item Can Be Seen" library="Demo">
+<arguments>
+<arg>${todo1}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:15.048" starttime="20170401 22:29:15.022"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:15.049" starttime="20170401 22:29:15.021"></status>
+</kw>
+<kw name="Verify ToDo Item Can Not Be Seen" library="Demo">
+<arguments>
+<arg>${todo2}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
+<doc>Waits until `text` disappears from current page.</doc>
+<arguments>
+<arg>${todo}</arg>
+</arguments>
+<status status="PASS" endtime="20170401 22:29:15.075" starttime="20170401 22:29:15.050"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:15.076" starttime="20170401 22:29:15.049"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:15.076" starttime="20170401 22:29:14.648"></status>
+</kw>
+<doc>Items matching the search criteria are seen. Items that do not match search criteria are hidden.</doc>
+<tags>
+<tag>ToDo</tag>
+</tags>
+<status status="PASS" endtime="20170401 22:29:15.076" critical="yes" starttime="20170401 22:29:14.646"></status>
+</test>
+<kw type="teardown" name="End test suite" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170401 22:29:18.187" starttime="20170401 22:29:15.079"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Cleaning up test data...</arg>
+</arguments>
+<msg timestamp="20170401 22:29:18.187" level="INFO">Cleaning up test data...</msg>
+<status status="PASS" endtime="20170401 22:29:18.187" starttime="20170401 22:29:18.187"></status>
+</kw>
+<status status="PASS" endtime="20170401 22:29:18.187" starttime="20170401 22:29:15.079"></status>
+</kw>
+<doc>Robot Framework tests for the demo web page.</doc>
+<status status="PASS" endtime="20170401 22:29:18.187" starttime="20170401 22:29:01.098"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="7">Critical Tests</stat>
+<stat fail="0" pass="7">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">Navigation</stat>
+<stat fail="0" pass="5">ToDo</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Demo" pass="7">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
